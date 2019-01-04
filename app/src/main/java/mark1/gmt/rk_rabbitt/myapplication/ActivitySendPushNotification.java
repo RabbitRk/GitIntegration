@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -164,7 +165,7 @@ public class ActivitySendPushNotification extends AppCompatActivity implements V
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
+                        Log.i("Responce........",response);
                         Toast.makeText(ActivitySendPushNotification.this, response, Toast.LENGTH_LONG).show();
                     }
                 },

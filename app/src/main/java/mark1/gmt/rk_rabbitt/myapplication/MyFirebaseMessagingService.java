@@ -44,7 +44,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             //parsing json data
             String title = data.getString("title");
             String message = data.getString("message");
-            String imageUrl = data.getString("image");
 
             //creating MyNotificationManager object
             MyNotificationManager mNotificationManager = new MyNotificationManager(getApplicationContext());
@@ -53,14 +52,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
 
             //if there is no image
-            if(imageUrl.equals("null")){
-                //displaying small notification
-                mNotificationManager.showSmallNotification(title, message, intent);
-            }else{
+//            if(imageUrl.equals("null")){
+//                //displaying small notification
+//                mNotificationManager.showSmallNotification(title, message, intent);
+//            }else{
                 //if there is an image
                 //displaying a big notification
-                mNotificationManager.showBigNotification(title, message, imageUrl, intent);
-            }
+                mNotificationManager.showBigNotification(title, message, intent);
+//            }
         } catch (JSONException e) {
             Log.e(TAG, "Json Exception: " + e.getMessage());
         } catch (Exception e) {
