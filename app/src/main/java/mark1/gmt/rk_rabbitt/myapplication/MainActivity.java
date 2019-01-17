@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextEmail = findViewById(R.id.editTextEmail);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         buttonSendPush = (Button) findViewById(R.id.buttonSendNotification);
-
+        Toast.makeText(this, "New Toast", Toast.LENGTH_SHORT).show();
         //adding listener to view
         buttonRegister.setOnClickListener(this);
         buttonSendPush.setOnClickListener(this);
